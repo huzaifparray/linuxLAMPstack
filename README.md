@@ -21,3 +21,10 @@ sudo systemctl restart apache2
 ##Step 9:Create a PHP info file to test PHP:
 echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
 ##Step 10:Access http://your_server_ip/info.php to verify PHP is working.
+##Step 11: if you want a web interface to manage your Mysql you can install phpmyadmin
+sudo apt install phpmyadmin -y
+##Step 12 :Enable phpmyadmin configuration in Apache.
+sudo phpenmod msqli
+sudo systemctl restart apache2
+##Step 13 :now we can access phpmyadmin at "https://your_server_ip/phpmyadmin"
+
